@@ -1,0 +1,35 @@
+{
+  "wordnet": {
+    "filename": "wordnet.zip",
+    "url": "https://en-word.net/static/english-wordnet-2025-plus.zip",
+    "bytes": 10979359,
+    "sha256": "8360c45a8e066d9f73ff7682172d70ffae48a2604ac23e5ca7f43abcabc004a6",
+    "version": "Open English WordNet 2025 Plus"
+  },
+  "wiktextract": {
+    "filename": "wiktextract.jsonl.gz",
+    "url": "https://kaikki.org/dictionary/raw-wiktextract-data.jsonl.gz",
+    "bytes": 2981058381,
+    "sha256": "3dac8a09e57827bef493e2e6b552fe917bf3b1fc55dee05c4e4a3702aff5dbdb",
+    "version": "enwiktionary 2026-09-02; Kaikki extraction 2026-10-03; wiktextract 1a05e46f9efbccda6a2b2f8e21b30a9c0c46513a"
+  },
+  "stardict": {
+    "filename": "ka-en.tar.zst",
+    "url": "https://github.com/xxyzz/wiktionary_stardict/releases/download/20260928/ka-en.tar.zst",
+    "bytes": 5599056,
+    "sha256": "c966f4ff6dd2be3fe14c38652621f61c8fde2ea03804f0df092a1137ab29fa5f",
+    "version": "20260928; English Wiktionary snapshot 2026-09-01"
+  },
+  "kawiktionary": {
+    "filename": "kawiktionary.xml.bz2",
+    "url": "https://dumps.wikimedia.your.org/kawiktionary/20261001/kawiktionary-20261001-pages-articles.xml.bz2",
+    "mirrors": [
+      "https://dumps.wikimedia.org/kawiktionary/20261001/kawiktionary-20261001-pages-articles.xml.bz2",
+      "https://mirror.accum.se/mirror/wikimedia.org/dumps/kawiktionary/20261001/kawiktionary-20261001-pages-articles.xml.bz2"
+    ],
+    "bytes": 5320866,
+    "sha256": "426e0af98f23667ccd96ca38977ab6e7311885cb35431b524aa157401bcfbd10",
+    "sha1": "8f132d89d4c0005fc6c5dbe99c1f7b1812972517",
+    "version": "2026-10-01 pages-articles dump"
+  }
+}

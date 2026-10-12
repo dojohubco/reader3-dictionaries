@@ -1,0 +1,6 @@
+packs/
+*.sqlite
+*.sqlite.gz
+__pycache__/
+tools/dictionaries/work/
+tools/dictionaries/out/

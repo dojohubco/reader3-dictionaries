@@ -1,0 +1,62 @@
+reader3 dictionary packs v2026.10.12
+Adapted collection: CC BY-SA 4.0. Open English WordNet content: CC BY 4.0.
+Additional modifications: split by language/direction; needed senses/translations only; duplicated English morphology; cross-source Georgian/English form-to-lemma aliases by normalized lemma/POS.
+
+
+Source 1: Open English WordNet 2025 Plus + Morphy exceptions
+License: CC BY 4.0
+Source: https://en-word.net/
+
+Open English WordNet team; John P. McCrae et al. (2019), English WordNet 2019. Derived from Princeton WordNet. License: https://creativecommons.org/licenses/by/4.0/ . Modified: popup filtering and truncation; morphological mappings.
+
+This software and database is being provided to you, the LICENSEE, by  
+the Open English Wordnet team under the Creative Commons Attribution 4.0  
+International License (CC-BY 4.0).  
+                 
+Open English Wordnet 2023 Copyright 2023 by the Open English Wordnet team.  
+  
+Permission to use, copy, modify and distribute this software and  
+database and its documentation for any purpose and without fee or  
+royalty is hereby granted, provided that you agree to comply with  
+the following copyright notice and statements, including the disclaimer,  
+and that the same appear on ALL copies of the software, database and  
+documentation, including modifications that you make for internal  
+use or for distribution.  
+  
+WordNet 3.1 Copyright 2011 by Princeton University.  All rights reserved.  
+  
+THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS" AND PRINCETON  
+UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR  
+IMPLIED.  BY WAY OF EXAMPLE, BUT NOT LIMITATION, PRINCETON  
+UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES OF MERCHANT-  
+ABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE  
+OF THE LICENSED SOFTWARE, DATABASE OR DOCUMENTATION WILL NOT  
+INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR  
+OTHER RIGHTS.  
+  
+The name of Princeton University or Princeton may not be used in  
+advertising or publicity pertaining to distribution of the software  
+and/or database.  Title to copyright in this software, database and  
+any associated documentation shall at all times remain with  
+Princeton University and LICENSEE agrees to preserve same.  
+
+
+Source 2: English Wiktionary via Kaikki / Wiktextract
+License: CC BY-SA 4.0
+Source: https://en.wiktionary.org/
+
+English Wiktionary contributors; Kaikki.org / Tatu Ylonen, Wiktextract (2022). For each entry link https://en.wiktionary.org/wiki/<URL-encoded headword> (page history credits authors). License: https://creativecommons.org/licenses/by-sa/4.0/ . Modified: filtering, short glosses, one IPA/example, aliases.
+
+
+Source 3: Wiktionary Georgian-English StarDict aliases
+License: CC BY-SA 4.0
+Source: https://xxyzz.github.io/wiktionary_stardict/
+
+English Wiktionary contributors; StarDict extraction by xxyzz, 20260928 (snapshot 2026-09-01). For each lemma link https://en.wiktionary.org/wiki/<URL-encoded headword>. Dictionary data license confirmed in ka-en.ifo; GPL extraction code is not incorporated. License: https://creativecommons.org/licenses/by-sa/4.0/ . Modified: normalized aliases and fallback glosses.
+
+
+Source 4: Georgian Wiktionary
+License: CC BY-SA 4.0
+Source: https://ka.wiktionary.org/
+
+Georgian Wiktionary contributors, 2026-10-01 dump. For each entry link https://ka.wiktionary.org/wiki/<URL-encoded headword> (page history credits authors). License: https://creativecommons.org/licenses/by-sa/4.0/ . Modified: Georgian-section wikitext parsing, short glosses and translations.
