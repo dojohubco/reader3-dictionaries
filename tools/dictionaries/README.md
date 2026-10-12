@@ -1,6 +1,6 @@
 # reader3 offline dictionaries, v1
 
-This desktop pipeline implements the offline part of `PLAN.md` §4.3 and §5. It builds one lookup database for English and Georgian books. It does not modify the Android app or publish a release.
+This desktop pipeline implements the offline part of `PLAN.md` §4.3 and §5. It builds one lookup database for English and Georgian books. The initial build produces one database; the pack splitter publishes separate distributions for the app catalog.
 
 ## Run
 
@@ -108,3 +108,18 @@ The CLI prints the route, matched lemma/POS, one IPA where available, up to six 
 `test_dictionary.py` uses small synthetic fixtures to test WordNet offset parsing/sense order, exception aliases, malformed StarDict records, quotation removal, Georgian language/meaning boundaries, old/new definition styles, normalization, ambiguity, POS filtering, exact/form/Morphy/phrase precedence, SQL indices, sense limits, foreign keys, read-only access, and checksum rejection. Tests require no downloads.
 
 The full builder checks source hashes, pinned `.syn` count, StarDict target bounds and license, SQLite integrity and foreign keys, and final size before replacing the output. `REPORT.md` records the full-build measurements and actual CLI output for the requested words. Counts describe dictionary coverage; they do not measure accuracy or contextual translation quality. Phone latency, Android SQLite/Room integration, and real-book selection behavior have not been tested here.
+
+## Built-in catalog packs (2026.10.12)
+
+```sh
+rtk python3 -I tools/dictionaries/test_split_packs.py
+rtk python3 -I tools/dictionaries/split_packs.py \
+  --db /home/tornike/Documents/Projects/reader3-artifacts/reader3-dict-v1.sqlite \
+  --out /home/tornike/Documents/Projects/reader3-artifacts/packs
+```
+
+This reuses the existing database without downloading sources. Outputs are four independent `.sqlite`/`.sqlite.gz` files, `SHA256SUMS` and `catalog.json`, outside Git. Each has the same schema, its own metadata, needed source/IPA/form notices, indexes, VACUUM, integrity and foreign-key checks. SQL uses an 8 MiB page cache and disk-backed temporary storage; gzip and SHA-256 use bounded buffers.
+
+`en-en` contains English definitions/forms/Morphy; `ka-ka` contains Georgian definitions and their aliases; `en-ka` contains Georgian translations plus referenced senses and English forms/Morphy; `ka-en` contains English glosses/translations plus Georgian aliases. Aliases from other source entries are mapped by the same normalized lemma/POS to make the small packs self-contained. Translation sense references retain their source meaning; no inferred translation is added.
+
+Public hosting: https://github.com/dojohubco/reader3-dictionaries. Release: https://github.com/dojohubco/reader3-dictionaries/releases/tag/v2026.10.12. The public repository contains only this data build pipeline and license/attribution documentation. Catalog sizes and SHA-256 are measured from the released assets. Adapted data packs retain CC BY-SA 4.0 ShareAlike; WordNet retains its CC BY 4.0 and Princeton notices. The private app repository is not pushed.
