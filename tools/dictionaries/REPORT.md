@@ -196,3 +196,23 @@ SHA-256:
 464f8f9c96e5a60788fa6fddc2dd21f389895796db6d1bd1ecd54e59528fa943  reader3-dict-v1.sqlite
 e7a57d051e093fbd51bcd87dc461c869047f79e8d819c793a7c0aa1d8b96519d  reader3-dict-v1.sqlite.gz
 ```
+
+
+## Four-pack distribution, 2026.10.12
+
+Split the preserved `reader3-artifacts/reader3-dict-v1.sqlite` without downloading any source again. The source SHA-256 remains `464f8f9c96e5a60788fa6fddc2dd21f389895796db6d1bd1ecd54e59528fa943`.
+
+| Pack | Gzip bytes | SQLite bytes | Gzip SHA-256 |
+| --- | ---: | ---: | --- |
+| `en-en` | 69,639,898 | 175,521,792 | `e9630c4efd40c49f80b99ce261cea6e1bd2da7a91aa49de50eb76bbd0a7c2b85` |
+| `ka-ka` | 1,647,419 | 8,855,552 | `dc672f3be221ee464c595c03150efad3d3d48597b0452be0a83ceac71d1ecd10` |
+| `en-ka` | 1,720,883 | 4,587,520 | `07e2f9d368c0f8cbced15dfccb1de39ce9f420872526fc1abb49dfd552c257cb` |
+| `ka-en` | 7,311,021 | 44,167,168 | `721a5f92955923133d03bb3c045adee4ee546b496951dcf4708696827340aaf7` |
+
+Each pack passed VACUUM, integrity_check and foreign_key_check. Direction/source entry IDs remain unchanged; source aliases are also mapped to the same normalized lemma/POS in the selected pack. English morphology is self-contained in both English packs. The splitter self-check passed and confirmed the source file was not modified.
+
+Standalone Python lookup checks passed: `en-en`: provincial, acquiesced (forms), give up, coquetry; `en-ka`: provincial, give up, books (forms); `ka-ka`: წიგნებს (forms), ნაბადი; `ka-en`: წიგნებს (forms), ვლაპარაკობ (forms), ნაბადი. The source has no Georgian translation for every English word; the split does not invent one. Full rendered output is in the artifact directory's `packs/verification.json`.
+
+[Public data repository](https://github.com/dojohubco/reader3-dictionaries) and [release v2026.10.12](https://github.com/dojohubco/reader3-dictionaries/releases/tag/v2026.10.12) contain the build pipeline, attribution/LICENSE/NOTICE and all five requested assets. Anonymous `curl -q -fsIL` returned 200 for all four gzip files, the versioned catalog and `/releases/latest/download/catalog.json`; a subsequent anonymous catalog GET matched the embedded Android catalog exactly.
+
+Android implementation and physical-phone evidence are recorded separately in `docs/dev-screens/dictionary-catalog/README.md`. The adapted data remains CC BY-SA 4.0 with WordNet CC BY 4.0/Princeton notices; the app source repository is not pushed.
